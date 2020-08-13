@@ -16,5 +16,8 @@ test: main.c linked_list_queue.o tests/test_linked_list_queue.c tests/CuTest.c m
 linked_list_queue.o: linked_list_queue.c
 	$(CC) $(CCFLAGS) -c -o $@ $^
 
+install:
+	cp * $LLQUEUE_DIR
+
 clean:
 	rm -f main.c linked_list_queue.o test $(GCOV_OUTPUT)
